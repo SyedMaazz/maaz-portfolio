@@ -1,25 +1,35 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fira_Code } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin"],
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "Syed Maaz | Portfolio",
   description: "Frontend Developer Portfolio",
+  icons: {
+    icon: "/icon.svg",  // or whatever your filename is
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen font-sans">{children}</body>
+    <html lang="en">
+      <body className={`${inter.variable} ${firaCode.variable} font-[var(--font-inter)] antialiased bg-black`}>
+        {children}
+      </body>
     </html>
   );
 }
