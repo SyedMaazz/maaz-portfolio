@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Hero from "../components/hero";
 import Rays from "../components/rays";
+import About from "../components/about";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <div className="relative z-10">
         <Header />
         <Hero />
+        <About />
       </div>
 
     </div>
