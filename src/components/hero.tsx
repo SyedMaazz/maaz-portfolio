@@ -11,12 +11,12 @@ const firaCode = Fira_Code({ subsets: ["latin"] });
 const TYPED_WORDS = ["web experiences", "fast UIs", "clean code", "cool stuff"];
 
 const TECH_STACK = [
-  { name: "JavaScript", bg: "#1a3a6e", text: "#60a5fa" },
-  { name: "GoLang", bg: "#14532d", text: "#4ade80" },
-  { name: "C++", bg: "#1e1e2e", text: "#e2e8f0" },
-  { name: "Rust", bg: "#450a0a", text: "#f87171" },
-  { name: "React", bg: "#7f1d1d", text: "#fca5a5" },
-  { name: "Node.js", bg: "#422006", text: "#fbbf24" },
+  { name: "JavaScript", bg: "#06183d", text: "#0059ff" },
+  { name: "GoLang", bg: "#093309", text: "#00cc00" },
+  { name: "C++", bg: "#27272a", text: "#fbfbfb" },
+  { name: "Rust", bg: "#27272a", text: "#fbfbfb" },
+  { name: "React", bg: "#3b0909", text: "#ff0000" },
+  { name: "Node.js", bg: "#38270a", text: "#ffaf00" },
 ];
 
 export default function Hero() {
