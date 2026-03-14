@@ -54,7 +54,7 @@ export default function Hero() {
       className={`relative min-h-screen w-full flex items-center ${inter.className}`}
     >
       <div
-        className={`w-full max-w-4xl px-8 py-28 mx-auto transition-all duration-700 ${
+        className={`w-full max-w-4xl px-8 pt-28 mx-auto transition-all duration-700 ${
           mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
