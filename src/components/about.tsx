@@ -47,41 +47,70 @@ const INTERESTS = [
 
 export default function About() {
   return (
-    <section id="about" className={`w-full bg-[#09090b] py-20 ${inter.className}`}>
-      <div className="max-w-[930px] mx-auto px-8">
-
+    <section
+      id="about"
+      className={`w-full bg-[#09090b] py-20 ${inter.className}`}
+    >
+      <div className="max-w-[940px] mx-auto px-8">
         {/* Section heading */}
-       <h2 className="text-3xl font-bold text-white mb-7 mt-16 -ml-12">
+        <h2 className="text-3xl font-bold text-white mb-7 mt-16 -ml-11">
           # About Me
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-10 items-start">
-
           {/* Left — bio + cards */}
           <div className="flex-1">
             {/* Description — uniform text color, no highlights */}
-           <p className="text-[#a1a1aa] text-lg leading-7 max-w-4xl -ml-12 -mt-1">
-              I&apos;m Syed Maaz, a 22-year-old software engineer from
-              Lucknow, India. I&apos;m currently pursuing B.Tech in Computer
-              Science at IILM University, where I also serve in a leadership
-              role with the IEEE IILM chapter. I have a solid grasp of Frontend
-              development and a growing command over Backend as well as Web3.
+            <p className="text-[#a1a1aa] text-lg leading-7 max-w-4xl -ml-10.5 -mt-1">
+              I&apos;m Syed Maaz, a 22-year-old software engineer from Lucknow,
+              India. I&apos;m currently pursuing B.Tech in Computer Science at
+              IILM University, where I also serve in a leadership role with the
+              IEEE IILM chapter. I have a solid grasp of Frontend development
+              and a growing command over Backend as well as Web3.
             </p>
 
             {/* 2x2 cards grid */}
-            <div className="mt-8 grid grid-cols-2 gap-3 -ml-12">
-              {CARDS.map(({ icon: Icon, title, description }) => (
+            <div className="mt-8 grid grid-cols-2 gap-x-10 gap-y-8 -ml-10.5">
+              {CARDS.map(({ icon: Icon, title, description }, index) => (
                 <div
                   key={title}
-                  className="rounded-lg border border-white/10 bg-[#121215] p-4 hover:border-white/20 transition-all duration-200"
+                  className={`rounded-[1.2rem] border border-white/5 bg-[#121215] p-4 hover:border-white/20 transition-all duration-200 ${
+                    index === 0
+                      ? "p-4 pt-7.5 w-[110%]"
+                      : index === 1
+                        ? "pl-6 ml-2 h-[186px] w-[111%]"
+                        : index === 2
+                          ? "p-4 pt-7.5 w-[110%] h-[185px]"
+                          : index === 3
+                            ? "pl-6 ml-2 h-[165px] w-[111%]"
+                            : "p-4"
+                  }`}
                 >
-                  <div className="flex items-center gap-2 mb-2 ml-9 mt-1.5">
-                    <Icon className="h-4 w-4 text-white/60" />
-                    <span className="text-lg font-semibold text-white">
+                  <div
+                    className={`flex items-center gap-2 mb-2 ${index === 0 ? "gap-3 mb-3 ml-1" : ""}`}
+                  >
+                    <div
+                      className={`flex items-center justify-center rounded-lg bg-white/8 ${
+                        index === 0 ? "h-10 w-10" : "h-8 w-8"
+                      }`}
+                    >
+                      <Icon
+                        className={
+                          index === 0
+                            ? "h-5 w-5 text-white"
+                            : "h-4 w-4 text-white"
+                        }
+                      />
+                    </div>
+                    <span
+                      className={`font-semibold text-white ${index === 0 ? "text-base" : "text-sm"}`}
+                    >
                       {title}
                     </span>
                   </div>
-                  <p className="text-xs text-[#a1a1aa] leading-5">
+                  <p
+                    className={`text-[#a1a1aa] leading-[1.55] ${index === 0 ? "text-sm ml-1" : "text-[13px]"}`}
+                  >
                     {description}
                   </p>
                 </div>
@@ -91,7 +120,6 @@ export default function About() {
 
           {/* Right — photo + experience + education + interests */}
           <div className="w-full lg:w-92 rounded-lg border border-white/10 bg-[#121215] p-6 flex flex-col gap-6">
-
             {/* Photo */}
             <div className="flex justify-center">
               <div className="h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
@@ -157,7 +185,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>
