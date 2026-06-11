@@ -86,7 +86,7 @@ export default function Hero() {
         </h2>
 
         {/* Description — first line ends at "in" */}
-        <p className="mt-6 max-w-[600px] text-lg leading-7 text-white/50">
+        <p className="mt-6 max-w-[600px] text-lg leading-7 text-white/40">
           Software engineer from Lucknow, India. Currently pursuing B.Tech in
           Computer Science at IILM University with a passion for Frontend
           development.
