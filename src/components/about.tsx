@@ -51,17 +51,17 @@ export default function About() {
       id="about"
       className={`w-full bg-[#09090b] py-20 ${inter.className}`}
     >
-      <div className="max-w-[940px] mx-auto px-8">
+      <div className="max-w-[1100px] ml-93 px-8">
         {/* Section heading */}
-        <h2 className="text-3xl font-bold text-white mb-7 mt-16 -ml-11">
+        <h2 className="text-3xl font-bold text-white mb-7 mt-15.5 -ml-10">
           # About Me
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
+        <div className="flex flex-col lg:flex-row gap-13.5 items-start">
           {/* Left — bio + cards */}
-          <div className="flex-1">
+          <div className="flex-none w-[490px]">
             {/* Description — uniform text color, no highlights */}
-            <p className="text-[#a1a1aa] text-lg leading-7 max-w-4xl -ml-10.5 -mt-1">
+            <p className="text-[#a1a1aa] text-lg leading-7 max-w-4xl -ml-[39px] -mt-[2.5px]">
               I&apos;m Syed Maaz, a 22-year-old software engineer from Lucknow,
               India. I&apos;m currently pursuing B.Tech in Computer Science at
               IILM University, where I also serve in a leadership role with the
@@ -70,19 +70,19 @@ export default function About() {
             </p>
 
             {/* 2x2 cards grid */}
-            <div className="mt-8 grid grid-cols-2 gap-x-10 gap-y-8 -ml-10.5">
+            <div className="mt-[33px] grid grid-cols-2 gap-x-10 gap-y-[33px] -ml-[39px]">
               {CARDS.map(({ icon: Icon, title, description }, index) => (
                 <div
                   key={title}
                   className={`rounded-[1.2rem] border border-white/5 bg-[#121215] p-4 hover:border-white/20 transition-all duration-200 ${
                     index === 0
-                      ? "p-4 pt-7.5 w-[110%]"
+                      ? "p-4 pt-7.5 w-[106.2%] h-[204px]"
                       : index === 1
-                        ? "pl-6 ml-2 h-[186px] w-[111%]"
+                        ? "pl-6 -ml-[1px] h-[186px] w-[106.2%]"
                         : index === 2
-                          ? "p-4 pt-7.5 w-[110%] h-[185px]"
+                          ? "p-4 pt-7.5 w-[106.2%] h-[186px]"
                           : index === 3
-                            ? "pl-6 ml-2 h-[165px] w-[111%]"
+                            ? "pl-6 -ml-[1px] h-[166.5px] w-[106.2%]"
                             : "p-4"
                   }`}
                 >
@@ -119,7 +119,7 @@ export default function About() {
           </div>
 
           {/* Right — photo + experience + education + interests */}
-          <div className="w-full lg:w-92 rounded-lg border border-white/10 bg-[#121215] p-6 flex flex-col gap-6">
+          <div className="w-full lg:w-[377px] h-[641px] rounded-[1.2rem] border border-white/5 bg-[#121215] p-6 flex flex-col gap-6 -mt-0.5">
             {/* Photo */}
             <div className="flex justify-center">
               <div className="h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
