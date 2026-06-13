@@ -34,7 +34,7 @@ const CARDS = [
 ];
 
 const EXPERIENCE = [
-  { role: "IEEE-IILM Treasurer", org: "IEEE IILM Chapter" },
+  { role: "Treasurer", org: "IEEE Student Branch, IILM University" },
   { role: "Innovation Incubation Centre", org: "IILM University" },
 ];
 
@@ -60,7 +60,7 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-13.5 items-start">
           {/* Left — bio + cards */}
           <div className="flex-none w-[490px]">
-            {/* Description — uniform text color, no highlights */}
+            {/* Description */}
             <p className="text-[#a1a1aa] text-lg leading-7 max-w-4xl -ml-[39px] -mt-[2.5px]">
               I&apos;m Syed Maaz, a 22-year-old software engineer from Lucknow,
               India. I&apos;m currently pursuing B.Tech in Computer Science at
@@ -122,12 +122,12 @@ export default function About() {
           <div className="w-full lg:w-[377px] h-[641px] rounded-[1.2rem] border border-white/5 bg-[#121215] p-6 flex flex-col gap-6 -mt-0.5">
             {/* Photo */}
             <div className="flex justify-center">
-              <div className="h-32 w-32 rounded-full overflow-hidden border-2 border-white/10">
+              <div className="h-40 w-40 rounded-full overflow-hidden border-4 border-white/20 -mt-2">
                 <Image
                   src="/pfp.png"
                   alt="Syed Maaz"
-                  width={128}
-                  height={128}
+                  width={160}
+                  height={160}
                   className="object-cover w-full h-full grayscale"
                 />
               </div>
@@ -135,16 +135,41 @@ export default function About() {
 
             {/* Experience */}
             <div>
-              <p className="text-xs font-mono text-[#a1a1aa] mb-3">
+              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-0.5 -mt-0.5">
                 $ experience
               </p>
-              <div className="flex flex-col gap-3">
-                {EXPERIENCE.map(({ role, org }) => (
-                  <div key={role} className="flex items-start gap-2">
-                    <span className="mt-1 text-white/30 text-xs">→</span>
+              <div className="flex flex-col gap-4">
+                {EXPERIENCE.map(({ role, org }, index) => (
+                  <div
+                    key={role}
+                    className={`flex items-center gap-3 ${index === 1 ? "mt-2" : ""}`}
+                  >
+                    <div className="flex h-8 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-white/10 ml-[15px] mt-[6px]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-white"
+                      >
+                        <path d="M18 8L22 12L18 16" />
+                        <path d="M2 12H22" />
+                      </svg>
+                    </div>
                     <div>
-                      <p className="text-sm font-medium text-white">{role}</p>
-                      <p className="text-xs text-[#a1a1aa]">{org}</p>
+                      <p className="text-[16px] font-semibold text-white/90 mt-2">
+                        {role}
+                      </p>
+                      <p
+                        className={`text-[14px] text-[#a1a1aa] ${index === 0 ? "max-w-[180px]" : ""}`}
+                      >
+                        {org}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -153,16 +178,32 @@ export default function About() {
 
             {/* Education */}
             <div>
-              <p className="text-xs font-mono text-[#a1a1aa] mb-3">
+              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-0.5">
                 $ education
               </p>
-              <div className="flex items-start gap-2">
-                <span className="mt-1 text-white/30 text-xs">→</span>
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-white/8 border border-white/10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white/60"
+                  >
+                    <path d="M18 8L22 12L18 16" />
+                    <path d="M2 12H22" />
+                  </svg>
+                </div>
                 <div>
-                  <p className="text-sm font-medium text-white">
+                  <p className="text-[15px] font-semibold text-white">
                     IILM University
                   </p>
-                  <p className="text-xs text-[#a1a1aa]">
+                  <p className="text-[13px] text-[#a1a1aa]">
                     B.Tech in Computer Science, 2027
                   </p>
                 </div>
@@ -171,7 +212,7 @@ export default function About() {
 
             {/* Interests */}
             <div>
-              <p className="text-xs font-mono text-[#a1a1aa] mb-3">
+              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-0.5">
                 $ interests
               </p>
               <div className="flex flex-wrap gap-2">
