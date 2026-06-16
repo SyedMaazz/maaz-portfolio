@@ -144,7 +144,7 @@ export default function About() {
                     key={role}
                     className={`flex items-center gap-3 ${index === 1 ? "mt-2" : ""}`}
                   >
-                    <div className="flex h-8 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-white/10 ml-[15px] mt-[6px]">
+                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-white/10 ml-[15px] mt-[6px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -178,32 +178,32 @@ export default function About() {
 
             {/* Education */}
             <div>
-              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-0.5">
+              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-0.5 mt-2.5">
                 $ education
               </p>
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-white/8 border border-white/10">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-white/10 ml-[16px] mt-[7px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
+                    width="16"
+                    height="16"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-white/60"
+                    className="text-white"
                   >
                     <path d="M18 8L22 12L18 16" />
                     <path d="M2 12H22" />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-[15px] font-semibold text-white">
+                  <p className="text-[16px] font-semibold text-white mt-1">
                     IILM University
                   </p>
-                  <p className="text-[13px] text-[#a1a1aa]">
+                  <p className="text-[14px] text-[#a1a1aa]">
                     B.Tech in Computer Science, 2027
                   </p>
                 </div>
@@ -212,7 +212,7 @@ export default function About() {
 
             {/* Interests */}
             <div>
-              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-0.5">
+              <p className="text-[15px] font-mono text-[#a1a1aa] mb-4 ml-[5px]">
                 $ interests
               </p>
               <div className="flex flex-wrap gap-2">
