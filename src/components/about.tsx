@@ -87,26 +87,14 @@ export default function About() {
                   }`}
                 >
                   <div
-                    className={`flex items-center gap-2 mb-2 ${index === 0 ? "gap-3 mb-3 ml-1" : ""}`}
+                    className={`flex items-center gap-3 mb-3 -mt-3.5 ${index === 1 ? "ml-[2px] mt-0" : index === 3 ? "ml-[2px] mt-0" : "ml-2.5"}`}
                   >
-                    <div
-                      className={`flex items-center justify-center rounded-lg bg-white/8 ${
-                        index === 0 ? "h-10 w-10" : "h-8 w-8"
-                      }`}
-                    >
-                      <Icon
-                        className={
-                          index === 0
-                            ? "h-5 w-5 text-white"
-                            : "h-4 w-4 text-white"
-                        }
-                      />
+                    <div className="flex items-center justify-center rounded-lg bg-white/8 h-10 w-10">
+                      <Icon className="h-5 w-5 text-white" />
                     </div>
-                    <span
-                      className={`font-semibold text-white ${index === 0 ? "text-base" : "text-sm"}`}
-                    >
-                      {title}
-                    </span>
+                   <span className={`font-semibold text-white -mt-0.5 text-lg ${index === 2 ? "mt-[1px]" : index === 3 ? "mt-[1px]" : ""}`}>
+  {title}
+</span>
                   </div>
                   <p
                     className={`text-[#a1a1aa] leading-[1.55] ${index === 0 ? "text-sm ml-1" : "text-[13px]"}`}
