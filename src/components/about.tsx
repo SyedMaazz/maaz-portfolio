@@ -17,7 +17,7 @@ const CARDS = [
     icon: Users,
     title: "Student Leader",
     description:
-      "Leadership roles at IEEE IILM chapter as Treasurer and EPS Chair. Contributing to technical initiatives and community building.",
+      "Leadership roles at IEEE student chapter as Treasurer. Contributing to technical initiatives and community building.",
   },
   {
     icon: Lightbulb,
@@ -34,8 +34,8 @@ const CARDS = [
 ];
 
 const EXPERIENCE = [
-  { role: "Treasurer", org: "IEEE Student Branch, IILM University" },
-  { role: "Innovation Incubation Centre", org: "IILM University" },
+  { role: "IEEE Student Branch", org: "Treasurer, IILM University" },
+  { role: "Innovation Incubation Centre", org: "Member, IILM University" },
 ];
 
 const INTERESTS = [
@@ -92,12 +92,24 @@ export default function About() {
                     <div className="flex items-center justify-center rounded-lg bg-white/8 h-10 w-10">
                       <Icon className="h-5 w-5 text-white" />
                     </div>
-                   <span className={`font-semibold text-white -mt-0.5 text-lg ${index === 2 ? "mt-[1px]" : index === 3 ? "mt-[1px]" : ""}`}>
-  {title}
-</span>
+                    <span
+                      className={`font-semibold text-white -mt-0.5 text-lg ${index === 2 ? "mt-[1px]" : index === 3 ? "mt-[1px]" : ""}`}
+                    >
+                      {title}
+                    </span>
                   </div>
                   <p
-                    className={`text-[#a1a1aa] leading-[1.55] ${index === 0 ? "text-sm ml-1" : "text-[13px]"}`}
+                    className={`text-[#a1a1aa] ${
+                      index === 0
+                        ? "text-sm ml-[10px] max-w-[200px] leading-[1.43]"
+                        : index === 1
+                          ? "text-sm ml-[2px] max-w-[230px] leading-[1.42]"
+                          : index === 2
+                            ? "text-sm ml-[10px] max-w-[200px] leading-[1.43]"
+                            : index === 3
+                              ? "text-sm ml-[2px] max-w-[260px] leading-[1.43]"
+                              : "text-[13px] leading-[1.43]"
+                    }`}
                   >
                     {description}
                   </p>
