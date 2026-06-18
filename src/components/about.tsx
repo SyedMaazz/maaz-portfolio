@@ -49,7 +49,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className={`w-full bg-[#09090b] py-20 ${inter.className}`}
+      className={`w-full bg-[hsl(240 10% 1%)]  py-20 ${inter.className}`}
     >
       <div className="max-w-[1100px] ml-93 px-8">
         {/* Section heading */}

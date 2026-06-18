@@ -145,7 +145,7 @@ export default function Hero() {
               aria-label={label}
               className="text-white/60 hover:text-white transition-colors duration-200"
             >
-              <Icon size={20} />
+              <Icon size={20.5} />
             </a>
           ))}
         </div>

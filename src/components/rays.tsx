@@ -14,7 +14,7 @@ const hexToRgb = (hex: string): [number, number, number] => {
 const getRayConfig = (
   origin: string,
   w: number,
-  h: number
+  h: number,
 ): { anchor: [number, number]; dir: [number, number] } => {
   switch (origin) {
     case "top-center":
@@ -77,7 +77,7 @@ export default function Rays({
     if (!ref.current) return;
     const obs = new IntersectionObserver(
       ([e]) => setVisible(e.isIntersecting),
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     obs.observe(ref.current);
     return () => obs.disconnect();
@@ -249,7 +249,7 @@ export default function Rays({
       const { anchor, dir } = getRayConfig(
         raysOrigin,
         width * renderer.dpr,
-        height * renderer.dpr
+        height * renderer.dpr,
       );
       uniforms.rayPos.value = anchor;
       uniforms.rayDir.value = dir;
