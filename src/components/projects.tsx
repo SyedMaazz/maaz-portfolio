@@ -34,15 +34,15 @@ const PROJECTS = [
     codeUrl: "https://github.com/",
     liveUrl: "https://example.com/",
   },
-  {
-    title: "Cogito Chatbot",
-    description:
-      "Advanced conversational AI chatbot designed to provide intelligent and contextual responses.",
-    tags: ["AI", "NLP", "React", "Node.js"],
-    image: "/projects/cogito.png",
-    codeUrl: "https://github.com/",
-    liveUrl: null,
-  },
+ {
+  title: "Cogito Chatbot",
+  description:
+    "Advanced conversational AI chatbot designed to provide intelligent and contextual responses.",
+  tags: ["AI", "NLP", "React", "Node.js"],
+  image: "/projects/cogito.png",
+  codeUrl: "https://github.com/",
+  liveUrl: "https://example.com/",
+},
 ];
 
 export default function Projects() {
@@ -86,15 +86,15 @@ export default function Projects() {
                   />
                 </div>
 
-                <div className="p-5 flex flex-col flex-1">
+                <div className="p-5 flex flex-col flex-1 relative">
                   <h3 className="text-[19.5px] font-bold text-white mb-2 mt-1 ml-1">
                     {title}
                   </h3>
-                  <p className="text-[16px] text-[#a1a1aa] leading-6 mt-9 mb-1 flex-2 mt-2">
+                  <p className="text-[16px] text-[#a1a1aa] leading-6 mt-[35px] flex-2 ml-1 translate-y-1 max-w-[97%]">
                     {description}
                   </p>
 
-                  <div className="flex flex-nowrap gap-2 mb-15 ml-1 overflow-hidden">
+                  <div className="flex flex-nowrap gap-2 mb-[84px] ml-1 overflow-hidden">
                     {tags.map((tag) => (
                       <span
                         key={tag}
@@ -105,15 +105,15 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex items-center justify-around pt-2">
+                  <div className="flex items-center justify-center gap-27 absolute bottom-7.5 left-0 right-1 px-4">
                     <a
                       href={codeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-1 text-xs text-white/100 hover:text-white transition-colors duration-200"
                     >
-                      <Github className="h-3.5 w-3.5" />
-                      Code
+                      <Github className="h-3 w-3" />
+                      <span className="mt-0.5">Code</span>
                     </a>
                     {liveUrl && (
                       <a
@@ -122,8 +122,8 @@ export default function Projects() {
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-xs text-white/100 hover:text-white transition-colors duration-200"
                       >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                        Live
+                        <ExternalLink className="h-3 w-3" />
+                        <span className="mt-0.5">Live</span>
                       </a>
                     )}
                   </div>
