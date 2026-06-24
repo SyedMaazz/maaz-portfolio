@@ -12,7 +12,7 @@ const PROJECTS = [
     description:
       "A modern weather application providing real-time weather data and forecasts with an intuitive user...",
     tags: ["JavaScript", "React", "Weather API", "CSS"],
-    image: "/projects/weathernaut.png",
+    image: "/projects/weathernaut.gif",
     codeUrl: "https://github.com/",
     liveUrl: "https://example.com/",
   },
@@ -21,7 +21,7 @@ const PROJECTS = [
     description:
       "Comprehensive telematics solution for fleet management and road transport optimization.",
     tags: ["React", "Node.js", "MongoDB", "Express"],
-    image: "/projects/vayo.png",
+    image: "/projects/Vayo.avif",
     codeUrl: "https://github.com/",
     liveUrl: "https://example.com/",
   },
@@ -30,7 +30,7 @@ const PROJECTS = [
     description:
       "Intelligent platform for automated code assessment and evaluation using advanced AI algorithms.",
     tags: ["JavaScript", "AI", "Node.js", "React"],
-    image: "/projects/evalis.png",
+    image: "/projects/Evalis.avif",
     codeUrl: "https://github.com/",
     liveUrl: "https://example.com/",
   },
@@ -90,27 +90,29 @@ export default function Projects() {
                   <h3 className="text-[19.5px] font-bold text-white mb-2 mt-1 ml-1">
                     {title}
                   </h3>
-                 <p className="text-[16px] text-[#a1a1aa] leading-6 mt-7 mb-4 flex-1 mt-2">{description}</p>
+                  <p className="text-[16px] text-[#a1a1aa] leading-6 mt-9 mb-1 flex-2 mt-2">
+                    {description}
+                  </p>
 
-                  <div className="flex flex-wrap gap-2 mb-5">
+                  <div className="flex flex-nowrap gap-2 mb-15 ml-1 overflow-hidden">
                     {tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-white/8 px-3 py-1 text-xs font-medium text-white"
+                        className="rounded-full bg-white/10 px-[9px] py-0.5 text-[12.1px] font-medium text-white whitespace-nowrap"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-6 pt-4 border-t border-white/10">
+                  <div className="flex items-center justify-around pt-2">
                     <a
                       href={codeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors duration-200"
+                      className="flex items-center gap-1 text-xs text-white/100 hover:text-white transition-colors duration-200"
                     >
-                      <Github className="h-4 w-4" />
+                      <Github className="h-3.5 w-3.5" />
                       Code
                     </a>
                     {liveUrl && (
@@ -118,9 +120,9 @@ export default function Projects() {
                         href={liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors duration-200"
+                        className="flex items-center gap-1 text-xs text-white/100 hover:text-white transition-colors duration-200"
                       >
-                        <ExternalLink className="h-4 w-4" />
+                        <ExternalLink className="h-3.5 w-3.5" />
                         Live
                       </a>
                     )}
