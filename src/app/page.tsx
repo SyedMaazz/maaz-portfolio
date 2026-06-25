@@ -3,6 +3,7 @@ import Hero from "../components/hero";
 import Rays from "../components/rays";
 import About from "../components/about";
 import Projects from "../components/projects";
+import TechStack from "../components/techstack";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
+        <TechStack />
       </div>
     </div>
   );
